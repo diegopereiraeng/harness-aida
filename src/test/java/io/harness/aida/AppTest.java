@@ -7,6 +7,13 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+
 import static org.junit.Assert.fail;
 
 /**
@@ -41,7 +48,16 @@ public class AppTest
         String userInput = "'; DROP TABLE Users; --";
         String query = "SELECT * FROM Users WHERE username = '" + userInput + "'";
         // Execute the SQL query
-        // ...
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "username", "password");
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, userInput);
+
+//            ResultSet resultSet = statement.executeQuery();
+            // Process the query result
+            // ...
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         System.out.println(query);
         assertTrue( true );
     }

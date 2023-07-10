@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.harness.aida.AppTest" time="0.039" tests="2" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.harness.aida.AppTest" time="0.169" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/test-classes:/Users/diegopereira/Documents/Development/git/harness-aida/target/classes:/Users/diegopereira/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/diegopereira/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/test-classes:/Users/diegopereira/Documents/Development/git/harness-aida/target/classes:/Users/diegopereira/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/diegopereira/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/diegopereira/.m2/repository/mysql/mysql-connector-java/8.0.26/mysql-connector-java-8.0.26.jar:/Users/diegopereira/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -12,9 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/surefire/surefirebooter10403880716618793789.jar /Users/diegopereira/Documents/Development/git/harness-aida/target/surefire 2023-07-10T00-11-06_613-jvmRun1 surefire14765798139536368349tmp surefire_02379395680028947095tmp"/>
+    <property name="sun.java.command" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/surefire/surefirebooter14115411075321074234.jar /Users/diegopereira/Documents/Development/git/harness-aida/target/surefire 2023-07-10T01-51-13_997-jvmRun1 surefire11946153679707067230tmp surefire_03907020803268451992tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/test-classes:/Users/diegopereira/Documents/Development/git/harness-aida/target/classes:/Users/diegopereira/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/diegopereira/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/test-classes:/Users/diegopereira/Documents/Development/git/harness-aida/target/classes:/Users/diegopereira/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/diegopereira/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/diegopereira/.m2/repository/mysql/mysql-connector-java/8.0.26/mysql-connector-java-8.0.26.jar:/Users/diegopereira/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/diegopereira"/>
     <property name="user.language" value="en"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/surefire/surefirebooter10403880716618793789.jar"/>
+    <property name="surefire.real.class.path" value="/Users/diegopereira/Documents/Development/git/harness-aida/target/surefire/surefirebooter14115411075321074234.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17+0"/>
     <property name="user.name" value="diegopereira"/>
@@ -52,18 +52,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="io.harness.aida.AppTest" time="0.007">
-    <failure message="IndexOutOfBoundsException was thrown.&#10;error:&#10;&#10;Index 3 out of bounds for length 3" type="java.lang.AssertionError">java.lang.AssertionError: 
-IndexOutOfBoundsException was thrown.
-error:
-
-Index 3 out of bounds for length 3
-	at io.harness.aida.AppTest.shouldAnswerWithTrue(AppTest.java:35)
-</failure>
-    <system-out><![CDATA[Alice
-Bob
-Charlie
-]]></system-out>
-  </testcase>
-  <testcase name="SQLInjectionVulnerability" classname="io.harness.aida.AppTest" time="0"/>
+  <testcase name="shouldAnswerWithTrue" classname="io.harness.aida.AppTest" time="0.001"/>
+  <testcase name="SQLInjectionVulnerability" classname="io.harness.aida.AppTest" time="0.139"/>
 </testsuite>
