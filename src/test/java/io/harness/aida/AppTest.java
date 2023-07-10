@@ -27,7 +27,7 @@ public class AppTest
         names.add("Charlie");
 
         try {
-            for (int i = 0; i <= names.size(); i++) {
+            for (int i = 0; i < names.size(); i++) {
                 System.out.println(names.get(i));
             }
             assertTrue( true );
