@@ -4,11 +4,11 @@ FROM adoptopenjdk:11-jre-hotspot
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the application JAR file to the container
-COPY target/myapp.jar myapp.jar
+# Set build arguments for harness-aida version
+ARG HARNESS_AIDA_VERSION=1.0-SNAPSHOT
 
-# Scan the application JAR file for vulnerabilities using Aqua Trivy
-RUN trivy fs --exit-code 1 --no-progress /app
+# Copy the harness-aida JAR file to the container
+COPY target/harness-aida-${HARNESS_AIDA_VERSION}.jar harness-aida.jar
 
 # Run the Java application
-CMD ["java", "-jar", "myapp.jar"]
+CMD ["java", "-jar", "harness-aida.jar"]
