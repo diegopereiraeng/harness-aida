@@ -44,16 +44,20 @@ public class App
         
         System.out.println(query);
         
-
-        String algorithm = "DES";
-        KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
-        SecretKey secretKey = keyGenerator.generateKey();
-        byte[] keyBytes = secretKey.getEncoded();
-        SecretKeySpec secretKeySpec = new SecretKeySpec(keyBytes, algorithm);
-        Cipher cipher = Cipher.getInstance(algorithm);
-        cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
-        byte[] encryptedData = cipher.doFinal("Sensitive Data".getBytes());
-        System.out.println("Encrypted data: " + new String(encryptedData));
+        try {
+            String algorithm = "DES";
+            KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
+            SecretKey secretKey = keyGenerator.generateKey();
+            byte[] keyBytes = secretKey.getEncoded();
+            SecretKeySpec secretKeySpec = new SecretKeySpec(keyBytes, algorithm);
+            Cipher cipher = Cipher.getInstance(algorithm);
+            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
+            byte[] encryptedData = cipher.doFinal("Sensitive Data".getBytes());
+            System.out.println("Encrypted data: " + new String(encryptedData));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
 
 
         List<String> names = new ArrayList<>();
