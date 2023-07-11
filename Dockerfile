@@ -1,6 +1,6 @@
 # Use a base image with Java runtime
-# FROM adoptopenjdk:11-jre-hotspot
-FROM amazoncorretto:11-al2-generic
+FROM adoptopenjdk:11-jre-hotspot
+#FROM amazoncorretto:11-al2-generic
 
 # Set the working directory in the container
 WORKDIR /app
